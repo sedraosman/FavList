@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+
+        }
+
+        .main {
+            background-color: #fff;
+
+            width: 40%;
+            padding: 50px;
+            border-radius: 20px;
+        }
+
+        input[type="text"] {
+            padding: 20px;
+            width: 300px;
+            height: 5px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            width: 10rem;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: greenyellow;
+        }
+
+        ul{
+           
+            font-size: 20px;
+
+        }
+        p{
+            padding: 10px;
+            margin: 20px 0px;
+            border-radius: 10px;
+
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+    <div class="main">
+
+        <h1 id="header"> My Favorit List</h1>
+        <input type="text" class="form-control" id="text" placeholder="Add an item">
+
+        <input type="color" class="form-control" id="color">
+
+        <button onclick="AddItem()" type="button">Add Item</button>
+
+        <div id="list">
+
+
+        </div>
+    </div>
+    <script>
+        function AddItem() {
+            let element = document.querySelector("#text");
+            let color = document.querySelector("#color");
+            let list = document.querySelector("#list");
+
+
+
+
+
+
+
+            list.innerHTML += `<p style="background:linear-gradient(white,${color.value})">${element.value}</p>`;
+            element.value = " ";
+
+
+
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
